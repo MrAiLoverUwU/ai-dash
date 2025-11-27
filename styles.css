@@ -1,0 +1,53 @@
+/* Copy this content into the <style id="game-styles">...</style> block */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333;
+    font-family: sans-serif;
+    color: white;
+}
+
+#game-container {
+    width: 600px;
+    height: 150px;
+    border-bottom: 5px solid #0f0; /* The ground line */
+    position: relative;
+    overflow: hidden; /* Important: keeps objects from showing outside the bounds */
+    background-color: #222;
+}
+
+#player {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0px; /* Starts on the ground */
+    left: 50px;
+}
+
+.obstacle {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%); /* Makes it look like a spike */
+}
+
+#score-board {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+#game-over-message {
+    position: absolute;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    text-align: center;
+}
